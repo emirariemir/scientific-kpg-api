@@ -21,6 +21,6 @@ app.add_middleware(
 
 @app.post("/extract-keywords/")
 async def extract_keywords(file: UploadFile = File(...), is_two_column: bool = False):
-    text = extract_abstract_text(file, is_two_column)
-    keywords = generate_keywords(text)
-    return {"keywords": keywords}
+    abstract = extract_abstract_text(file, is_two_column)
+    keywords = generate_keywords(abstract)
+    return {"abstract": abstract, "keywords": keywords}
