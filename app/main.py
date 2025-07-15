@@ -1,14 +1,14 @@
 # app/main.py
 
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, Form, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from app.utils import extract_abstract_text
 from app.model import generate_keywords
 
 app = FastAPI(
     title="KPG Keyword Extractor API",
-    description="Extracts keyphrases from scientific white papers using a pretrained BART model.",
-    version="1.0.0",
+    description="Extracts keyphrases from scientific white papers using RAKE.",
+    version="0.0.1",
 )
 
 app.add_middleware(
