@@ -1,6 +1,6 @@
 # app/main.py
 
-from fastapi import FastAPI, UploadFile, File, HTTPException, Form
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from app.utils import extract_abstract_text
 from app.model import generate_keywords
